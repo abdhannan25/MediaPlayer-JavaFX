@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.media.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mediaplayer.media.controllers.MediaPlayerController">
+   <center>
+      <StackPane prefHeight="150.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <MediaView fx:id="mediaView" fitHeight="200.0" fitWidth="200.0" />
+            <VBox alignment="BOTTOM_CENTER" prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <Slider fx:id="progressBar" />
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#chooseFileMethod" text="ChooseFile">
+                           <HBox.margin>
+                              <Insets left="7.0" top="7.0" />
+                           </HBox.margin></Button>
+                        <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#play" text="Play">
+                           <HBox.margin>
+                              <Insets left="7.0" top="7.0" />
+                           </HBox.margin></Button>
+                        <Button layoutX="62.0" layoutY="10.0" mnemonicParsing="false" onAction="#pause" text="Pause" style="-fx-background-color:red; -fx-text-fill: #ffff">
+                           <HBox.margin>
+                              <Insets left="7.0" top="7.0" />
+                           </HBox.margin></Button>
+                        <Button layoutX="114.0" layoutY="10.0" mnemonicParsing="false" onAction="#stop" text="Stop">
+                           <HBox.margin>
+                              <Insets left="7.0" top="7.0" />
+                           </HBox.margin></Button>
+                        <Button layoutX="166.0" layoutY="10.0" mnemonicParsing="false" onAction="#slow" text="&lt;&lt;&lt;">
+                           <HBox.margin>
+                              <Insets left="7.0" top="7.0" />
+                           </HBox.margin></Button>
+                        <Button layoutX="218.0" layoutY="10.0" mnemonicParsing="false" onAction="#fast" text="&gt;&gt;&gt;">
+                           <HBox.margin>
+                              <Insets left="7.0" top="7.0" />
+                           </HBox.margin></Button>
+                        <Button layoutX="270.0" layoutY="10.0" mnemonicParsing="false" onAction="#skip10" text="+10s">
+                           <HBox.margin>
+                              <Insets left="7.0" top="7.0" />
+                           </HBox.margin></Button>
+                        <Button layoutX="291.0" layoutY="10.0" mnemonicParsing="false" onAction="#back10" text="-10s">
+                           <HBox.margin>
+                              <Insets left="7.0" top="7.0" />
+                           </HBox.margin></Button>
+                        <Slider fx:id="volumeSlider">
+                           <HBox.margin>
+                              <Insets left="10.0" top="10.0" />
+                           </HBox.margin>
+                        </Slider>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </StackPane>
+   </center>
+</BorderPane>
